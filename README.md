@@ -49,7 +49,7 @@ cd parking-pos
 
 ### 2. Setup PostgreSQL Database
 ```sql
-CREATE DATABASE parking_pos;
+CREATE DATABASE parking_tickets;
 ```
 ### 3. Run the Application
 ### 4. Verify Application is Running
