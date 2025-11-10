@@ -1,4 +1,5 @@
 package org.example.parkingpos.model.enums;
 
 public enum PaymentMethod {
+    CASH, CARD
 }

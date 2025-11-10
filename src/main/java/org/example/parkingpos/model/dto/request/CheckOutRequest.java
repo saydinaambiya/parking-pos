@@ -1,4 +1,4 @@
-package org.example.parkingpos.model.dto;
+package org.example.parkingpos.model.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.parkingpos.model.enums.PaymentMethod;
 
 @Data
 @NoArgsConstructor
@@ -20,4 +21,6 @@ public class CheckOutRequest {
             message = "Vehicle plate number can only contain letters and numbers"
     )
     private String vehiclePlateNumber;
+
+    private PaymentMethod paymentMethod;
 }

@@ -13,7 +13,7 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ErrorResponse {
+public class CommonErrorResponse {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime timestamp;
     private Integer status;
@@ -22,8 +22,8 @@ public class ErrorResponse {
 
     private Map<String, String> validationErrors;
 
-    public static ErrorResponse create(int status, String error, String message){
-        return ErrorResponse.builder()
+    public static CommonErrorResponse create(int status, String error, String message){
+        return CommonErrorResponse.builder()
                 .timestamp(LocalDateTime.now())
                 .status(status)
                 .error(error)

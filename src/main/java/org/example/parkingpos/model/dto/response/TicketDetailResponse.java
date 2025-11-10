@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.parkingpos.model.enums.PaymentMethod;
 import org.example.parkingpos.model.enums.VehicleType;
 
 import java.math.BigDecimal;
@@ -14,10 +15,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CheckOutResponse {
+public class TicketDetailResponse {
     private String ticketId;
     private String vehiclePlateNumber;
     private VehicleType vehicleType;
+    private PaymentMethod paymentMethod;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime checkInTime;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
