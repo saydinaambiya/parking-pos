@@ -13,6 +13,6 @@ FROM eclipse-temurin:17
 VOLUME /tmp
 
 # Copy the JAR from the build stage
-COPY --from=build /target/*.jar app.jar
+COPY --from=build /target/*.jar parking-pos-0.0.1.jar
 ENTRYPOINT ["java","-jar","/parking-pos-0.0.1.jar"]
 EXPOSE 8080
