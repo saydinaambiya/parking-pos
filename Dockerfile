@@ -14,5 +14,5 @@ VOLUME /tmp
 
 # Copy the JAR from the build stage
 COPY --from=build /target/*.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/parking-pos-0.0.1.jar"]
 EXPOSE 8080
